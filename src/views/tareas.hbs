@@ -1,0 +1,19 @@
+
+
+<div class="container">
+    <div class="row m-6">
+        {{#each result}}
+       <div class="card" style="width: 20rem;"> 
+       <div class="card-header">
+          <li class="list-group-item">{{ titulo }}</li>
+        </div>
+        <ul class="list-group list-group-flush">
+           <li class="list-group-item">{{ autor }}</li>
+           <li class="list-group-item">{{ descripcion }} </li>
+           <li class="list-group-item">{{ nivel }} </li>
+           <li class="list-group-item">{{ fecha }} </li>
+       </ul>
+    </div>
+      {{/each}}
+   </div>
+</div>

@@ -1,0 +1,68 @@
+
+
+
+
+
+
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+    
+<br><br><br><br>
+<hr>
+<h1 style="text-align: center;">Referencia de precios</h1>
+<hr>
+
+<br><br><br><br>
+
+
+   <div class="container">
+
+<div class="text-center m-5">
+    <hr>
+     <h3>
+        Listado de productos
+     </h3>
+    <hr>
+     
+     <table class="table">
+            <thead>
+                <th>Id Producto</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </thead>
+            <tbody>
+                {{#each results}}
+                <tr>
+                    <td>{{id_compra}}</td>
+                    <td>{{producto}}</td>
+                    <td>{{precio}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+     </table>
+</div>
+
+<script src="../public/js/productos.js"></script>
+
+<br><br><br><br>
+
+    <div style="text-align:center;">
+        <a href="./input.html">
+            <button type="button" class="btn btn-outline-dark">Toque aqui para actualizar tabla</button>
+        </a>
+    </div>
+
