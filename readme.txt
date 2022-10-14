@@ -1,4 +1,4 @@
-Integrantes: Laudonio Matias
-                Bonomi Lucas
+Integrantes: Bonomi Lucas
+               Laudonio Matias
                 Romero Agustin
                 Amoretti Rodrigo
