@@ -6,8 +6,8 @@ import hbs from 'hbs';
 import morgan from 'morgan';
 import methodOverride from 'method-override';
 import { fileURLToPath } from 'url';
-import { router } from './src/routes/tareasRouter.js';
-import './src/db/conexion.js';
+import { router } from './src/routes/homeRouter.js';
+// import './src/db/conexion.js';
 
 //Definimos la ruto del scope
 const __filename = fileURLToPath(import.meta.url);
@@ -30,6 +30,8 @@ app.set('views', path.join(__dirname, 'src/views'));
 hbs.registerPartials(path.join(__dirname, 'src/views/partials'))
 
 
+
+
 //Rutas
 
  app.use(router);
@@ -39,11 +41,6 @@ hbs.registerPartials(path.join(__dirname, 'src/views/partials'))
 app.listen(PORT, () => {
     console.log(`Aplicación con Yarn y ES6 corriendo en el Puerto: ${PORT}`);
 });
-
-
-
-
-
 
 
 
@@ -65,7 +62,6 @@ app.listen(PORT, () => {
 
 
 
-
 app.get('/', (req, res, next) =>{
     let sql ='SELECT * FROM trabajopp';
 
@@ -77,6 +73,7 @@ app.get('/', (req, res, next) =>{
         
     })
 });
+
 
 
 
@@ -122,7 +119,6 @@ app.get('/tareas', (req,res) =>{
 
 
 
-
 app.get('/page', (req,res) =>{
     
     res.render('page',{
@@ -134,6 +130,32 @@ app.get('/page', (req,res) =>{
     });
 
 });
+
+
+app.get('/editar', (req,res) =>{
+    
+    res.render('editar',{
+        
+        style:'styles.css',
+        validacion: 'validacion'
+        
+        
+    });
+
+});
+
+app.get('/editarTarea', (req,res) =>{
+    
+    res.render('editarTarea',{
+        
+        style:'styles.css',
+        validacion: 'validacion'
+        
+        
+    });
+
+});
+
 
 // app.get('/', (req,res) =>{
     

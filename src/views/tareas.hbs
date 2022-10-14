@@ -3,16 +3,27 @@
 <div class="container">
     <div class="row m-6">
         {{#each result}}
+        
        <div class="card" style="width: 20rem;"> 
        <div class="card-header">
-          <li class="list-group-item">{{ titulo }}</li>
+          <li class="list-group-item"> {{ titulo }}  </li>
         </div>
         <ul class="list-group list-group-flush">
-           <li class="list-group-item">{{ autor }}</li>
-           <li class="list-group-item">{{ descripcion }} </li>
-           <li class="list-group-item">{{ nivel }} </li>
-           <li class="list-group-item">{{ fecha }} </li>
+           <li  class="list-group-item">{{ _id}} </li>
+           {{!-- <li class="list-group-item"> {{ titulo }}  </li> --}}
+           <li class="list-group-item"> {{ autor }} </li>
+           <li class="list-group-item"> {{ descripcion }}  </li>
+            <li class="list-group-item"> {{ nivel }}  </li>
+
+           <li class="list-group-item"> {{ fecha }}   </li>
+
+            <a href="/editarTarea/{{ _id }}"  >editame</a>
+            <a href="/borrar/{{ _id }}"  >Borrame</a>
+            
+           <button  class="btn btn-warning" type="submit" >editar</button>
+           <button  class="btn btn-danger" type="button"  >ELIMINAR</button> 
        </ul>
+       
     </div>
       {{/each}}
    </div>
